@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane fx:id="sideCreateBar" prefHeight="699.0" prefWidth="200.0" stylesheets="@lightmode.css" BorderPane.alignment="CENTER">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <VBox prefHeight="656.0" prefWidth="172.0" spacing="20.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="25.0">
+               <children>
+                  <Button mnemonicParsing="false" styleClass="sideCreateBarMenuText" stylesheets="@application.css" text="DASHBOARD">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/dashboards.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="sideCreateBarMenuText" stylesheets="@application.css" text="EVENTS">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/calendar%20(1).png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="45.0" mnemonicParsing="false" styleClass="sideCreateBarMenuText" stylesheets="@application.css" text="REFUNDS">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/check.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="80.0" mnemonicParsing="false" styleClass="sideCreateBarMenuText" stylesheets="@application.css" text="BANKING">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/refund.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="115.0" mnemonicParsing="false" styleClass="sideCreateBarMenuText" stylesheets="@application.css" text="TEMPLATES">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/write.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="150.0" mnemonicParsing="false" styleClass="sideCreateBarMenuText" stylesheets="@application.css" text="CERTIFICATE">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/award.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="185.0" mnemonicParsing="false" styleClass="sideCreateBarMenuText" stylesheets="@application.css" text="MEMBERS">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/group-chat.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="220.0" mnemonicParsing="false" styleClass="sideCreateBarMenuText" stylesheets="@application.css" text="SETTINGS">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/setting.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <AnchorPane fx:id="upperCreateBar" prefHeight="77.0" prefWidth="1150.0" stylesheets="@lightmode.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutY="-18.0" prefHeight="112.0" prefWidth="329.0">
+               <children>
+                  <ImageView fitHeight="109.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/whiteEagle.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="upperCreateText" prefHeight="150.0" prefWidth="270.0" text="Koc Now">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="738.0" prefWidth="962.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

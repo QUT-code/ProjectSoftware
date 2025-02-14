@@ -1,0 +1,26 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: black;
+}
+#sideBar {
+    -fx-fill: blue; 
+}
+#upcomingText {
+	-fx-text-fill: black;
+}
+#upperCreateBar {
+	-fx-background-color:blue;
+}
+#upperCreateText {
+	-fx-text-fill: white;
+}
+#sideCreateBar {
+	-fx-background-color: #7B68EE;
+}
+.sideCreateBarMenuText {
+	-fx-background-color: transparent;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
+

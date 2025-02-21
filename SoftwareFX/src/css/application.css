@@ -1,0 +1,67 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.closeButton {
+	-fx-background-color: transparent;
+	-fx-cursor: hand;
+}
+.closeButton:hover {
+	-fx-background-color: #ff5151;
+	-fx-cursor: hand;
+}
+.tab-button {
+	-fx-background-color: transparent;
+	-fx-opacity: 0.6;
+	-fx-text-fill: #fff;
+	-fx-cursor: hand;
+}
+.tab-button:hover {
+	-fx-background-color: #909090;
+	-fx-opacity: 1;
+	-fx-cursor: hand;
+}
+.createEventButton {
+	-fx-background-color: orange;
+	-fx-cursor: hand;
+}
+.createEventButton:hover {
+	-fx-background-color: #ff5151;
+	-fx-cursor: hand;
+}
+.buyTicketButton {
+	-fx-border-radius: 5px;
+	-fx-background-color: transparent;
+	-fx-cursor: hand;
+	-fx-border-color: black;
+}
+.buyTicketButton:hover {
+	-fx-background-color: #ff5151;
+	-fx-cursor: hand;
+}
+.textMain {
+	-fx-alignment: center;
+	-fx-background-color: transparent;
+	-fx-border-color: transparent;
+}
+.toggle-button {
+    -fx-background-color: #87CEEB;
+    -fx-pref-width: 64px;
+    -fx-pref-height: 34px;
+    -fx-background-radius: 30px; 
+    -fx-border-radius: 30px;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+}
+
+.toggle-button:selected {
+    -fx-background-color: #183153;
+}
+
+.upComingEvent:hover {
+	-fx-scale-x: 1.2;
+	-fx-scale-y: 1.2;
+	-fx-cursor: hand;
+}
+
+
+
+
+

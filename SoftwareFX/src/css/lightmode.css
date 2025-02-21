@@ -1,0 +1,33 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.sideMenu {
+	-fx-background-color: white;
+	-fx-border-color: #DBC5C5; 
+	-fx-border-width: 0px 2px 0px 0px;
+	
+}
+.topMenu {
+	-fx-background-color: white;
+	-fx-border-color: #DBC5C5; 
+	-fx-border-width: 0px 0px 2px 0px;
+}
+.centerMenu {
+	-fx-background-color: #E1E1E1;
+}
+.menuButton {
+	-fx-background-color: transparent;
+	-fx-text-fill: black;
+	-fx-cursor: hand;
+}
+.menuBar:hover {
+	-fx-background-radius: 20;
+	-fx-background-color: #5C7DFF;
+	-fx-cursor: hand;
+}
+
+
+.searchBar {
+	-fx-border-color: #DBC5C5;
+	-fx-border-radius: 50;
+}
+
+

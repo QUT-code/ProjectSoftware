@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="sideBar" stylesheets="@lightmode.css" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="934.0" prefWidth="200.0" styleClass="sideMenu" stylesheets="@lightmode.css">
+               <children>
+                  <Pane layoutX="20.0" layoutY="256.0" opacity="0.6" prefHeight="48.0" prefWidth="150.0" styleClass="menuBar" stylesheets="@lightmode.css" AnchorPane.topAnchor="46.0">
+                     <children>
+                        <Button graphicTextGap="15.0" layoutX="10.0" mnemonicParsing="false" styleClass="menuButton" stylesheets="@lightmode.css" text="Event">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/icon/calendar%20(3).png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Geist Regular" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="20.0" layoutY="356.0" opacity="0.6" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: #5C7DFF; -fx-background-radius: 20;" styleClass="menuBar" stylesheets="@lightmode.css" AnchorPane.topAnchor="146.0">
+                     <children>
+                        <Button graphicTextGap="15.0" layoutX="10.0" mnemonicParsing="false" styleClass="menuButton" stylesheets="@lightmode.css" text="Favorite">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/icon/heart.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Geist Regular" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="20.0" layoutY="456.0" opacity="0.6" prefHeight="48.0" prefWidth="150.0" styleClass="menuBar" stylesheets="@lightmode.css" AnchorPane.topAnchor="246.0">
+                     <children>
+                        <Button graphicTextGap="15.0" layoutX="10.0" mnemonicParsing="false" styleClass="menuButton" stylesheets="@lightmode.css" text="History">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/icon/history%20(1).png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Geist Regular" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="20.0" layoutY="556.0" opacity="0.6" prefHeight="48.0" prefWidth="150.0" styleClass="menuBar" stylesheets="@lightmode.css" AnchorPane.topAnchor="346.0">
+                     <children>
+                        <Button graphicTextGap="15.0" layoutX="10.0" mnemonicParsing="false" styleClass="menuButton" stylesheets="@lightmode.css" text="Create">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/icon/add.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Geist Regular" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Separator layoutY="420.0" prefWidth="200.0" AnchorPane.topAnchor="432.0" />
+               </children>
+            </AnchorPane>
+            <Pane layoutX="20.0" layoutY="836.0" opacity="0.6" prefHeight="48.0" prefWidth="150.0" styleClass="menuBar" stylesheets="@lightmode.css" AnchorPane.topAnchor="846.0">
+               <children>
+                  <Button graphicTextGap="15.0" layoutX="10.0" mnemonicParsing="false" styleClass="menuButton" stylesheets="@lightmode.css" text="User">
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/icon/user.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="-1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Text opacity="0.46" strokeType="OUTSIDE" strokeWidth="0.0" text="Main Menu" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="10.5" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <AnchorPane prefHeight="90.0" prefWidth="200.0" stylesheets="@lightmode.css" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="90.0" prefWidth="1240.0" style="-fx-background-color: E1E1E1; -fx-border-color: E1E1E1;" styleClass="topMenu" stylesheets="@lightmode.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Pane prefHeight="90.0" prefWidth="202.0" styleClass="sideMenu" stylesheets="@lightmode.css">
+               <children>
+                  <Button graphicTextGap="15.0" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="162.0" style="-fx-background-color: transparent;" text="KocNow" textFill="#ae7cf8">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../Downloads/icon/eagle%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="centerMenu" stylesheets="@lightmode.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="103.0" prefWidth="1138.0" spacing="20.0" AnchorPane.bottomAnchor="831.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="103.0" prefWidth="1138.0" spacing="30.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Favorite List">
+                           <font>
+                              <Font name="Geist Regular" size="52.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" layoutX="56.0" layoutY="185.0" prefHeight="300.0" prefWidth="300.0" spacing="30.0" AnchorPane.leftAnchor="56.0" AnchorPane.rightAnchor="56.0" AnchorPane.topAnchor="170.0">
+               <children>
+                  <VBox prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: white;" />
+                  <VBox prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: white;" />
+                  <VBox prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: white;" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="149.0" layoutY="557.0" prefHeight="300.0" prefWidth="300.0" spacing="30.0" AnchorPane.leftAnchor="56.0" AnchorPane.rightAnchor="56.0">
+               <children>
+                  <VBox prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: white;" />
+                  <VBox prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: white;" />
+                  <VBox prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: white;" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

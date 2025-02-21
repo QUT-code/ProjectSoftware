@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" stylesheets="@../css/lightmode.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CreateController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../css/lightmode.css" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="934.0" prefWidth="200.0" styleClass="sideMenu" stylesheets="@../css/lightmode.css">
+               <children>
+                  <Pane layoutX="20.0" layoutY="256.0" opacity="0.6" prefHeight="48.0" prefWidth="150.0" styleClass="menuBar" stylesheets="@../css/lightmode.css" AnchorPane.topAnchor="46.0">
+                     <children>
+                        <Button fx:id="eventButton" graphicTextGap="15.0" layoutX="10.0" mnemonicParsing="false" onAction="#switchToMain" styleClass="menuButton" stylesheets="@../css/lightmode.css" text="Event">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/icon/calendar%20(3).png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Geist Regular" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="20.0" layoutY="356.0" opacity="0.6" prefHeight="48.0" prefWidth="150.0" styleClass="menuBar" stylesheets="@../css/lightmode.css" AnchorPane.topAnchor="146.0">
+                     <children>
+                        <Button fx:id="favoriteButton" graphicTextGap="15.0" layoutX="10.0" mnemonicParsing="false" onAction="#switchToFavorite" styleClass="menuButton" stylesheets="@../css/lightmode.css" text="Favorite">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/icon/heart.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Geist Regular" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="20.0" layoutY="456.0" opacity="0.6" prefHeight="48.0" prefWidth="150.0" styleClass="menuBar" stylesheets="@../css/lightmode.css" AnchorPane.topAnchor="246.0">
+                     <children>
+                        <Button fx:id="historyButton" graphicTextGap="15.0" layoutX="10.0" mnemonicParsing="false" onAction="#switchToHistory" styleClass="menuButton" stylesheets="@../css/lightmode.css" text="History">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/icon/history%20(1).png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Geist Regular" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="20.0" layoutY="556.0" opacity="0.6" prefHeight="48.0" prefWidth="150.0" styleClass="menuBar" stylesheets="@../css/lightmode.css" AnchorPane.topAnchor="346.0">
+                     <children>
+                        <Button fx:id="createButton" graphicTextGap="15.0" layoutX="10.0" mnemonicParsing="false" styleClass="menuButton" stylesheets="@../css/lightmode.css" text="Create">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/icon/add.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Geist Regular" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Separator layoutY="420.0" prefWidth="200.0" AnchorPane.topAnchor="432.0" />
+                  <HBox alignment="CENTER" layoutX="56.0" layoutY="473.0" prefHeight="40.0" prefWidth="100.0" spacing="10.0" styleClass="searchBar" stylesheets="@../css/lightmode.css" AnchorPane.bottomAnchor="421.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="473.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../Downloads/sun.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="0.75" />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Pane layoutX="26.0" layoutY="804.0" opacity="0.6" prefHeight="48.0" prefWidth="150.0" styleClass="menuBar" stylesheets="@../css/lightmode.css">
+                     <children>
+                        <Button fx:id="userButton" graphicTextGap="15.0" layoutX="26.0" layoutY="1.0" mnemonicParsing="false" styleClass="menuButton" stylesheets="@../css/lightmode.css" text="User" underline="true">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/icon/user.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Button layoutX="57.0" layoutY="872.0" mnemonicParsing="false" style="-fx-background-color: #9DB1FF; -fx-background-radius: 20;" stylesheets="@../css/lightmode.css" text="Log out">
+                     <font>
+                        <Font name="Geist Regular" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Text opacity="0.46" strokeType="OUTSIDE" strokeWidth="0.0" text="Main Menu" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="10.5" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <AnchorPane prefHeight="90.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="90.0" prefWidth="1240.0" style="-fx-background-color: #f4f4f4; -fx-border-color: #f4f4f4;" styleClass="topMenu" stylesheets="@../css/lightmode.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="298.0" layoutY="26.0" text="User Event Creation Form">
+                     <font>
+                        <Font name="Geist Regular" size="50.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="90.0" prefWidth="202.0" styleClass="sideMenu" stylesheets="@../css/lightmode.css">
+               <children>
+                  <Button graphicTextGap="15.0" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="162.0" style="-fx-background-color: transparent;" text="KocNow" textFill="#ae7cf8">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../Downloads/icon/eagle%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../css/lightmode.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="15.0" layoutY="265.0" prefHeight="75.0" prefWidth="409.0" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="240.0">
+               <children>
+                  <Label text="Contact Information">
+                     <font>
+                        <Font name="Geist Regular" size="32.0" />
+                     </font>
+                  </Label>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contact (In case of problems the KocNow Team will reach out to this person.)" />
+               </children>
+            </VBox>
+            <Separator layoutX="185.0" layoutY="13.0" prefWidth="1238.0" style="-fx-background-color: #e1e1e1;" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="13.0" />
+            <Label text="Your Organization" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="33.0">
+               <font>
+                  <Font name="Geist Regular" size="32.0" />
+               </font>
+            </Label>
+            <Text layoutX="24.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fields marked with an asterisk (*) are required" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="76.05078125" />
+            <Text layoutX="34.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Organization Name *" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="116.0" />
+            <Text layoutX="44.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name of the business. company, shop, NGO, etc" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="140.0" />
+            <TextField fx:id="companyName" layoutX="5.0" layoutY="169.0" prefHeight="25.0" prefWidth="256.0" promptText="Name" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="958.0" />
+            <Text layoutX="592.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step 1 of 2" />
+            <Text layoutX="34.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Organization Category *" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="116.0" />
+            <Text layoutX="34.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the category that best fits your organization." AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="140.0" />
+            <ChoiceBox fx:id="categoryChoice" layoutX="900.0" layoutY="169.0" prefHeight="25.0" prefWidth="272.0" style="-fx-background-color: white; -fx-border-color: #e1e1e1;" AnchorPane.leftAnchor="760.0" />
+            <Separator layoutX="10.0" layoutY="220.0" prefWidth="1238.0" style="-fx-background-color: #e1e1e1;" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="220.0" />
+            <HBox layoutX="362.0" layoutY="449.0" prefHeight="203.0" prefWidth="1183.0" spacing="480.0" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="340.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="257.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name *" />
+                        <TextField prefHeight="25.0" prefWidth="256.0" />
+                        <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number *" />
+                        <TextField layoutX="10.0" layoutY="36.0" prefHeight="25.0" prefWidth="256.0" promptText="098457773" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="203.0" prefWidth="256.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email *" />
+                        <TextField fx:id="companyName2" prefHeight="25.0" prefWidth="256.0" promptText="email" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Separator layoutX="14.0" layoutY="230.0" prefWidth="1238.0" style="-fx-background-color: #e1e1e1;" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="480.0" />
+            <VBox layoutX="34.0" layoutY="260.0" prefHeight="75.0" prefWidth="409.0" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="500.0">
+               <children>
+                  <Label text="About Event">
+                     <font>
+                        <Font name="Geist Regular" size="32.0" />
+                     </font>
+                  </Label>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contact (In case of problems the KocNow Team will reach out to this person.)" />
+               </children>
+            </VBox>
+            <HBox layoutX="24.0" layoutY="575.0" prefHeight="308.0" prefWidth="1167.0" spacing="500.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="550.0">
+               <children>
+                  <ImageView fitHeight="220.0" fitWidth="220.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../Pictures/Screenshots/Screenshot%202025-02-20%20203710.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="40.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox prefHeight="200.0" prefWidth="257.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tittle *" />
+                        <TextField prefHeight="25.0" prefWidth="256.0" />
+                        <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SubTittle *" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" />
+                        <Text layoutX="10.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Price *" />
+                        <Spinner fx:id="ticketPrice" editable="true" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="10% commission on tickets with $0.35 minimum (0% on free tickets)" />
+                        <Text layoutX="10.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Date *" />
+                        <DatePicker prefHeight="25.0" prefWidth="155.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Button layoutX="530.0" layoutY="887.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-radius: 20;" text="Next">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+   </center>
+</BorderPane>

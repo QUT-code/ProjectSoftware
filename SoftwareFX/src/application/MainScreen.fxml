@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" stylesheets="@../css/lightmode.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../css/lightmode.css" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="934.0" prefWidth="200.0" styleClass="sideMenu" stylesheets="@../css/lightmode.css">
+               <children>
+                  <Pane layoutX="20.0" layoutY="256.0" opacity="0.6" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: #5C7DFF; -fx-background-radius: 20;" styleClass="menuBar" stylesheets="@../css/lightmode.css" AnchorPane.topAnchor="46.0">
+                     <children>
+                        <Button fx:id="eventButton" graphicTextGap="15.0" layoutX="10.0" mnemonicParsing="false" styleClass="menuButton" stylesheets="@../css/lightmode.css" text="Event">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/icon/calendar%20(3).png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Geist Regular" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="20.0" layoutY="356.0" opacity="0.6" prefHeight="48.0" prefWidth="150.0" styleClass="menuBar" stylesheets="@../css/lightmode.css" AnchorPane.topAnchor="146.0">
+                     <children>
+                        <Button fx:id="favoriteButton" graphicTextGap="15.0" layoutX="10.0" mnemonicParsing="false" onAction="#switchToFavorite" styleClass="menuButton" stylesheets="@../css/lightmode.css" text="Favorite">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/icon/heart.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Geist Regular" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="20.0" layoutY="456.0" opacity="0.6" prefHeight="48.0" prefWidth="150.0" styleClass="menuBar" stylesheets="@../css/lightmode.css" AnchorPane.topAnchor="246.0">
+                     <children>
+                        <Button fx:id="historyButton" graphicTextGap="15.0" layoutX="10.0" mnemonicParsing="false" onAction="#switchToHistory" styleClass="menuButton" stylesheets="@../css/lightmode.css" text="History">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/icon/history%20(1).png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Geist Regular" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="20.0" layoutY="556.0" opacity="0.6" prefHeight="48.0" prefWidth="150.0" styleClass="menuBar" stylesheets="@../css/lightmode.css" AnchorPane.topAnchor="346.0">
+                     <children>
+                        <Button fx:id="createButton" graphicTextGap="15.0" layoutX="10.0" mnemonicParsing="false" onAction="#switchToCreate" styleClass="menuButton" stylesheets="@../css/lightmode.css" text="Create">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/icon/add.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Geist Regular" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Separator layoutY="420.0" prefWidth="200.0" AnchorPane.topAnchor="432.0" />
+                  <HBox alignment="CENTER" layoutX="56.0" layoutY="473.0" prefHeight="40.0" prefWidth="100.0" spacing="10.0" styleClass="searchBar" stylesheets="@../css/lightmode.css" AnchorPane.bottomAnchor="421.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="473.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../Downloads/sun.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="0.75" />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Pane layoutX="26.0" layoutY="804.0" opacity="0.6" prefHeight="48.0" prefWidth="150.0" styleClass="menuBar" stylesheets="@../css/lightmode.css" AnchorPane.bottomAnchor="82.0" AnchorPane.topAnchor="804.0">
+                     <children>
+                        <Button fx:id="userButton" graphicTextGap="15.0" layoutX="26.0" layoutY="1.0" mnemonicParsing="false" styleClass="menuButton" stylesheets="@../css/lightmode.css" text="User" underline="true">
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Downloads/icon/user.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Button layoutX="57.0" layoutY="872.0" mnemonicParsing="false" style="-fx-background-color: #9DB1FF; -fx-background-radius: 20;" stylesheets="@../css/lightmode.css" text="Log out">
+                     <font>
+                        <Font name="Geist Regular" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Text opacity="0.46" strokeType="OUTSIDE" strokeWidth="0.0" text="Main Menu" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="10.5" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <AnchorPane prefHeight="90.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="90.0" prefWidth="1240.0" styleClass="topMenu" stylesheets="@../css/lightmode.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Pane prefHeight="90.0" prefWidth="202.0" styleClass="sideMenu" stylesheets="@../css/lightmode.css">
+               <children>
+                  <Button graphicTextGap="15.0" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="162.0" style="-fx-background-color: transparent;" text="KocNow" textFill="#ae7cf8">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../Downloads/icon/eagle%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../css/lightmode.css">
+         <children>
+            <Text layoutX="458.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Find an event &amp; buy tickets" textAlignment="CENTER" AnchorPane.leftAnchor="458.0" AnchorPane.rightAnchor="457.9935546874999">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Text>
+            <HBox alignment="CENTER" layoutX="82.0" layoutY="122.0" prefHeight="40.0" prefWidth="375.0" spacing="10.0" styleClass="searchBar" stylesheets="@../css/lightmode.css">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../Downloads/icon/search.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="0.75" />
+                     </effect>
+                  </ImageView>
+                  <TextField prefHeight="25.0" prefWidth="300.0" promptText="Search" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <Text layoutX="176.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search event name or venue" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <DatePicker layoutX="780.0" layoutY="123.0" prefHeight="38.0" prefWidth="371.0" />
+            <Text layoutX="872.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search by event date:" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Label layoutX="14.0" layoutY="182.0" text="Recently Added">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <ScrollPane layoutX="14.0" layoutY="223.0" prefHeight="697.0" prefWidth="1208.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <Button layoutX="1104.0" layoutY="187.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: Blue;" text="Filter" textFill="WHITE" />
+         </children></AnchorPane>
+   </center>
+</BorderPane>

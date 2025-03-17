@@ -1,0 +1,19 @@
+Note in order to setup in your Computer:
++ reset pom.xml
+- select all text in pom.xml and cut then paste it again then save (1)
+- if the first step doesn't reload yet run the pom.xml and click mvn build clean
+
++ set Scenebuilder
+- go to Window on the top tab
+- go to Preference
+- click on Javafx
+- on SceneBuilder exetutable find your Scenebuilder.exe file
+
++ set run argument
+- get the argument from javafx document
+- just change path to your javasdk library path
+
+Ps.
+- after all of the above and it still doesn't work make sure click on each controller file and do same as (pom.xml first step)
+- for images and fxml if it doesn't do same as (pom.xml first step)
+because this may due to the file doesn't reload properly

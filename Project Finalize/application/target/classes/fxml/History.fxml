@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1440.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HistoryController">
+   <left>
+      <AnchorPane prefHeight="900.0" prefWidth="250.0" styleClass="sideMenu" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="118.0" layoutY="48.0" stylesheets="@../css/styles.css" text="KocNow" AnchorPane.rightAnchor="58.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="157.0" onAction="#backToEvent" prefHeight="52.0" prefWidth="200.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Event" AnchorPane.leftAnchor="25.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR_ALT" size="20" />
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" disable="true" graphicTextGap="15.0" layoutX="25.0" layoutY="231.0" prefHeight="52.0" prefWidth="200.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Favorite" AnchorPane.leftAnchor="25.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HEART" size="20" />
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="306.0" prefHeight="52.0" prefWidth="200.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="History" AnchorPane.leftAnchor="25.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HISTORY" size="20" />
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="381.0" onAction="#goToCreate" prefHeight="52.0" prefWidth="200.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Create" AnchorPane.leftAnchor="25.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="20" />
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" graphicTextGap="15.0" layoutX="72.0" layoutY="837.0" maxHeight="-Infinity" onAction="#backToLogin" prefHeight="43.0" prefWidth="110.0" ripplerFill="BLACK" styleClass="logoutButton" stylesheets="@../css/styles.css" text="Log out" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="68.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" onDragDetected="#backToLogin" size="20" />
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </JFXButton>
+            <ImageView fx:id="mainLogo" fitHeight="50.0" fitWidth="50.0" layoutX="42.0" layoutY="39.0" pickOnBounds="true" AnchorPane.topAnchor="39.0" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="700.0" prefWidth="1190.0" styleClass="sideMenu" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="-4.0" prefHeight="860.0" prefWidth="1174.0" styleClass="centerMenu" stylesheets="@../css/styles.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <VBox prefHeight="859.0" prefWidth="1167.0">
+                     <children>
+                        <Label text="Transcation History" textFill="WHITE">
+                           <font>
+                              <Font size="45.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TableView fx:id="tableView" prefHeight="772" prefWidth="1167">
+						    <columns>
+						        <TableColumn fx:id="eventNameColumn" prefWidth="150.0" style="-fx-background-color: black;" text="Event Name" />
+						        <TableColumn fx:id="ticketPriceColumn" prefWidth="150.0" style="-fx-background-color: black;" text="Ticket Price" />
+						        <TableColumn fx:id="purchaseDateColumn" prefWidth="300.0" style="-fx-background-color: black;" text="Date Purchase" />
+						    </columns>
+						</TableView>
+
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

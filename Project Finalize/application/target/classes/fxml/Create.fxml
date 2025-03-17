@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1440.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateController">
+   <left>
+      <AnchorPane prefHeight="900.0" prefWidth="250.0" styleClass="sideMenu" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="118.0" layoutY="48.0" stylesheets="@../css/styles.css" text="KocNow" AnchorPane.rightAnchor="58.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="157.0" onAction="#backToEvent" prefHeight="52.0" prefWidth="200.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Event" AnchorPane.leftAnchor="25.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR_ALT" size="20" />
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" disable="true" graphicTextGap="15.0" layoutX="25.0" layoutY="231.0" prefHeight="52.0" prefWidth="200.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Favorite" AnchorPane.leftAnchor="25.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HEART" size="20" />
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="306.0" onAction="#switchToHistory" prefHeight="52.0" prefWidth="200.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="History" AnchorPane.leftAnchor="25.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HISTORY" size="20" />
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="381.0" prefHeight="52.0" prefWidth="200.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Create" AnchorPane.leftAnchor="25.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="20" />
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" graphicTextGap="15.0" layoutX="72.0" layoutY="837.0" maxHeight="-Infinity" onAction="#backToLogin" prefHeight="43.0" prefWidth="110.0" ripplerFill="BLACK" styleClass="logoutButton" stylesheets="@../css/styles.css" text="Log out" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="68.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="20" />
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </JFXButton>
+            <ImageView fx:id="mainLogo" fitHeight="50.0" fitWidth="50.0" layoutX="42.0" layoutY="39.0" pickOnBounds="true" AnchorPane.topAnchor="39.0" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="700.0" prefWidth="1190.0" styleClass="sideMenu" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="step1Pane" layoutX="-4.0" prefHeight="860.0" prefWidth="1174.0" styleClass="centerMenu" stylesheets="@../css/styles.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <VBox layoutY="2.0" prefHeight="242.0" prefWidth="1168.0" AnchorPane.topAnchor="1.0">
+                     <children>
+                        <Label text="Your Organization">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="30.0" top="30.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox prefHeight="155.0" prefWidth="1168.0">
+                           <children>
+                              <VBox prefHeight="154.0" prefWidth="587.0">
+                                 <children>
+                                    <Label text="Organization Name">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="30.0" top="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="orgName" prefHeight="61.0" prefWidth="557.0" style="-fx-border-radius: 25;" styleClass="textfield" stylesheets="@../css/styles.css">
+                                       <VBox.margin>
+                                          <Insets left="30.0" right="80.0" top="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="580.0">
+                                 <children>
+                                    <Label text="Organization Category">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <JFXComboBox fx:id="orgCategory" prefHeight="61.0" prefWidth="585.0" promptText="-- Select --" style="-fx-font-size: 20;">
+                                       <VBox.margin>
+                                          <Insets right="80.0" top="20.0" />
+                                       </VBox.margin>
+                                    </JFXComboBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutY="250.0" prefHeight="445.0" prefWidth="1168.0">
+                     <children>
+                        <Label text="Contact Information">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="30.0" top="30.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox prefHeight="155.0" prefWidth="1168.0">
+                           <children>
+                              <VBox prefHeight="154.0" prefWidth="587.0">
+                                 <children>
+                                    <Label text="Full Name">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="30.0" top="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="contactName" prefHeight="71.0" prefWidth="477.0" style="-fx-border-radius: 25;" styleClass="textfield" stylesheets="@../css/styles.css">
+                                       <VBox.margin>
+                                          <Insets left="30.0" right="80.0" top="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="580.0">
+                                 <children>
+                                    <Label text="Email">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="contactEmail" prefHeight="71.0" prefWidth="557.0" style="-fx-border-radius: 25;" styleClass="textfield" stylesheets="@../css/styles.css">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets right="80.0" top="20.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="199.0" prefWidth="1168.0">
+                           <children>
+                              <VBox prefHeight="199.0" prefWidth="558.0">
+                                 <children>
+                                    <Label text="Phone Number">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="30.0" top="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="contactNumber" prefHeight="71.0" prefWidth="557.0" promptText="098457773" style="-fx-border-radius: 25;" styleClass="textfield" stylesheets="@../css/styles.css">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="30.0" right="40.0" top="20.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label layoutX="553.0" layoutY="788.0" opacity="0.35" text="1 of 4" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="553.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="step2Pane" prefHeight="860.0" prefWidth="1174.0" styleClass="centerMenu" stylesheets="@../css/styles.css" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <VBox layoutY="3.0" prefHeight="774.0" prefWidth="1168.0" AnchorPane.topAnchor="2.0">
+                     <children>
+                        <Label text="About Event">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="30.0" top="30.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox prefHeight="625.0" prefWidth="1168.0">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="154.0" prefWidth="587.0">
+                                 <children>
+                                    <ImageView fx:id="layoutCover" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true">
+                                       <VBox.margin>
+                                          <Insets left="130.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <JFXButton onAction="#uploadCoverImage" prefHeight="37.0" prefWidth="203.0" style="-fx-background-color: #05BD5D; -fx-background-radius: 25;" text="Choose your File">
+                                       <VBox.margin>
+                                          <Insets left="175.0" top="100.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                    <VBox prefHeight="113.0" prefWidth="587.0" spacing="20.0">
+                                       <VBox.margin>
+                                          <Insets top="55.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <Label text="Location">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="30.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <TextField fx:id="eventLocations" prefHeight="61.0" prefWidth="551.0" style="-fx-border-radius: 25;" styleClass="textfield" stylesheets="@../css/styles.css">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="30.0" right="80.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="580.0">
+                                 <children>
+                                    <Label text="Title">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="eventTitles" prefHeight="61.0" prefWidth="557.0" style="-fx-border-radius: 25;" styleClass="textfield" stylesheets="@../css/styles.css">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets right="80.0" top="20.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Label text="SubTitle">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="30.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextArea fx:id="eventSubTitles" prefHeight="100.0" prefWidth="200.0" styleClass="textarea" stylesheets="@../css/styles.css">
+                                       <VBox.margin>
+                                          <Insets right="80.0" top="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextArea>
+                                    <Label text="Ticket Price">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="30.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="eventPrice" prefHeight="61.0" prefWidth="557.0" style="-fx-border-radius: 25;" styleClass="textfield" stylesheets="@../css/styles.css">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets right="80.0" top="20.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Label text="Event Date">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets top="30.0" />
+                                       </padding>
+                                    </Label>
+                                    <DatePicker fx:id="eventDates" minHeight="61.0" minWidth="507.0">
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </DatePicker>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label layoutX="553.0" layoutY="797.0" opacity="0.35" text="2 of 4" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="553.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="step3Pane" prefHeight="860.0" prefWidth="1174.0" styleClass="centerMenu" stylesheets="@../css/styles.css" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <VBox layoutX="47.0" layoutY="308.0" prefHeight="456.0" prefWidth="1078.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="46.0">
+                     <children>
+                        <Label text="Event Description">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <TextArea fx:id="eventDescriptions" prefHeight="593.0" prefWidth="1078.0" stylesheets="@../css/styles.css">
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </VBox>
+                  <JFXButton layoutX="45.0" layoutY="178.0" onAction="#uploadBackgroundImage" prefHeight="37.0" prefWidth="203.0" style="-fx-background-color: #05BD5D; -fx-background-radius: 25;" text="Choose your File" AnchorPane.leftAnchor="46.0" AnchorPane.topAnchor="178.0" />
+                  <ImageView fx:id="eventBackground" fitHeight="250.0" fitWidth="744.0" layoutX="303.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="564.0" layoutY="793.0" opacity="0.35" text="3 of 4">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="step4Pane" prefHeight="700.0" prefWidth="1190.0" styleClass="sideMenu" stylesheets="@../css/styles.css" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <AnchorPane layoutX="-4.0" prefHeight="860.0" prefWidth="1174.0" styleClass="centerMenu" stylesheets="@../css/styles.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <Label layoutX="565.0" layoutY="787.0" opacity="0.35" text="4 of 4" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="565.0">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="71.0" layoutY="62.0" text="Register Event" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="464.0" layoutY="117.0" text="Review &amp; Submit">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <VBox alignment="CENTER" layoutX="299.0" layoutY="231.0" prefHeight="480.0" prefWidth="596.0" spacing="10.0">
+                           <children>
+                              <Text fx:id="textOrgName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Organization Name:">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textOrgCategory" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Org. Category:">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <Label text="Contact Person">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="textFullName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="FullName:">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textPhoneNumber" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number:">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <Label text="About Event">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Text fx:id="textEventTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Title:">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textEventSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="SubTitle:">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textEventPrice" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Price:">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textEventDate" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Date:">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="submitButton" contentDisplay="TEXT_ONLY" graphicTextGap="15.0" layoutX="1030.0" layoutY="817.0" maxHeight="-Infinity" onAction="#addEvent" prefHeight="43.0" prefWidth="110.0" ripplerFill="BLACK" styleClass="logoutButton" stylesheets="@../css/styles.css" text="Submit" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="80.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_RIGHT" size="20" />
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </JFXButton>
+            <JFXButton fx:id="nextButton" contentDisplay="GRAPHIC_ONLY" graphicTextGap="15.0" maxHeight="-Infinity" onAction="#handlePreviousButtonAction" prefHeight="43.0" prefWidth="110.0" ripplerFill="BLACK" styleClass="logoutButton" stylesheets="@../css/styles.css" text="Log out" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="80.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" size="20" />
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </JFXButton>
+            <JFXButton fx:id="previousButton" contentDisplay="GRAPHIC_ONLY" graphicTextGap="15.0" maxHeight="-Infinity" onAction="#handleNextButtonAction" prefHeight="43.0" prefWidth="110.0" ripplerFill="BLACK" styleClass="logoutButton" stylesheets="@../css/styles.css" text="Log out" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="80.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_RIGHT" size="20" />
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

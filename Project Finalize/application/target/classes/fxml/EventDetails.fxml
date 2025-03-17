@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DetailController">
+   <content>
+      <VBox prefHeight="838.0" prefWidth="1279.0" styleClass="background">
+         <children>
+            <HBox prefHeight="454.0" prefWidth="1279.0">
+               <children>
+                  <VBox prefHeight="454.0" prefWidth="660.0">
+                     <children>
+                        <Label fx:id="EventTitle" styleClass="text" text="Event Title">
+                           <font>
+                              <Font name="System Bold" size="38.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label styleClass="text" text="Event">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="342.0">
+                                 <children>
+                                    <Label styleClass="text" text="Date and Time">
+                                       <VBox.margin>
+                                          <Insets left="20.0" top="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Text fx:id="dateInfo" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Date Information">
+                                       <VBox.margin>
+                                          <Insets left="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="317.0">
+                                 <children>
+                                    <Label styleClass="text" text="Venue">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Text fx:id="locationEvent" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <HBox alignment="CENTER" prefHeight="223.0" prefWidth="659.0" spacing="50.0">
+                           <children>
+                              <Label styleClass="text" text="Ticket Price">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <JFXButton fx:id="TicketPrice" onAction="#purchaseTicket" prefHeight="41.0" prefWidth="123.0" text="Price">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="454.0" prefWidth="607.0">
+                     <children>
+                        <ImageView fx:id="backgroundEvent" fitHeight="392.0" fitWidth="620.0" pickOnBounds="true" preserveRatio="true" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="bar" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="345.0" prefWidth="1279.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="660.0">
+                     <children>
+                        <Label styleClass="text" text="Event Description">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextArea fx:id="descriptionField" editable="false" prefWidth="659.0" style="-fx-background-color: transparent;" wrapText="true" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </TextArea>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="345.0" prefWidth="620.0">
+                     <children>
+                        <Label styleClass="text" text="Event Description">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label styleClass="text" text="Organizer">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER" />
+                           </graphic>
+                        </Label>
+                        <Text fx:id="orgName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Org Name">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="37.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

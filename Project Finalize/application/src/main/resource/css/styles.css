@@ -1,0 +1,99 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.body {
+    -fx-background-color: #121212;
+    -fx-color: #1A1A1A;
+    -fx-font-family: Arial, sans-serif;
+}
+
+.fontfamily {
+    -fx-font-family: Geist;
+	-fx-text-fill: white;
+}
+
+.label {
+	-fx-text-fill: white;
+}
+
+.button {
+	-fx-text-fill: white;
+}
+
+.textfield {
+    -fx-background-color: #1D1D21;
+    -fx-border-color: #36383F;
+    -fx-font-family: Geist;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+}
+
+.textarea {
+    -fx-background-color: #1D1D21;
+    -fx-border-color: #36383F;
+    -fx-font-family: Geist;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+}
+
+.textfield:focused {
+    
+}
+
+.loginButton {
+	-fx-text-fill: #121212;
+	-fx-font-size: 20;
+	-fx-font-weight: bold;
+	-fx-background-color: white;
+	-fx-background-radius: 20;
+}
+
+.button:hover {
+	-fx-cursor: hand;
+    -fx-background-color: #BABABA;
+}
+
+.scroll-pane > .viewport {
+	-fx-background-color: #070707;
+}
+
+.fontawesome-icon {
+	-fx-font-size: 20;
+}
+.sideMenu {
+	-fx-background-color: #070707;
+}
+.sideMenuButton {
+	-fx-background-radius: 20;
+	-fx-font-weight: bold;
+}
+
+.centerMenu {
+	-fx-background-color: #1C1D21;
+	-fx-background-radius: 25;
+	-fx-border-color: #343436;
+	-fx-border-radius: 25;
+}
+
+.logoutButton {
+	-fx-background-color: #7448FD;
+	-fx-background-radius: 0;
+}
+
+.date-picker {
+	-fx-background-color: transparent;
+	-fx-font-weight: bold;
+}
+
+.hbox {
+	-fx-cursor: hand;
+}
+
+.columnText {
+	-fx-text-fill: black;
+}
+
+
+
+
+
+
+

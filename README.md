@@ -28,3 +28,10 @@ The Event Management Application is an event management application allows users
      - User can also create event to let another user can buy thier own ticket too.
 5. History
    - Show detail of transaction of user because user can also manage to buy ticket from our platform so their will be a history for user to view.
+
+# Technology Used
+- Java programming language
+- MySQL workbench for store user database
+- Eclipse IDE
+- Java FX for UX/UI
+- Scene Builder

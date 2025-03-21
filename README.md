@@ -17,4 +17,7 @@ The Event Management Application is an event management application allows users
    - Sign up: user need to input all the information we ask like username, email, and password.
    - Log in: user are able to log in with their account after sign up finish. The system will alert everytime user are doing it right or doing it wrong.
 
-2.
+2. MainScreen
+   - Their will be a mainscreen after user log in and sign up finished. User are able to find some function that our program let user use such as buying ticket, selling a ticket, creating a ticket, also manage thier ticket at the same time.
+   - Main Screen will appear an interface our ticket management from our adminstrator input.
+   - 

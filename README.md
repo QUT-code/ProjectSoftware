@@ -49,3 +49,11 @@ The Event Management Application is an event management application allows users
    - step 4 : We start develop this with Eclipse IDE, click on Non-Modulor from IDE and follow the instruction on this site https://openjfx.io/openjfx-docs/
    - Install and setup mysql workbench, from this site https://www.mysql.com/products/workbench/
    - Setup mysql workbench with your username and password.
+
+# Systems Requirement 
+ - OS: Window 10/ macOS10.15 / Linux
+ - CPU: Intel Core I3
+ - Ram 4Gb
+ - Storage: 500mb or free disk
+ - Java Version: Java17 or higher
+ - Database mySql workbench: Mysql 8.0+

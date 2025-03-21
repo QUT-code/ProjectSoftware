@@ -7,51 +7,55 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="580.0" styleClass="body" stylesheets="@/css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerLogin">
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerLogin">
    <children>
-      <HBox layoutX="178.0" layoutY="61.0" prefHeight="100.0" prefWidth="241.0" spacing="20.0">
+      <AnchorPane prefHeight="650.0" prefWidth="580.0">
          <children>
-            <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true">
-               <image>
-                  <Image url="@/images/eagle.png" />
-               </image>
-            </ImageView>
-            <Label prefWidth="177.0" styleClass="fontfamily" stylesheets="@/css/styles.css" text="KocNow" textFill="WHITE">
+            <MediaView fx:id="mediaView" fitHeight="650.0" fitWidth="580.0" preserveRatio="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="580.0" stylesheets="@/css/styles.css">
+         <children>
+            <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="150.0" layoutY="150.0" style="-fx-text-fill: black;" styleClass="fontfamily" stylesheets="@/css/styles.css" text="Login to continue." textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="35.0" />
+                  <Font name="Geist Regular" size="35.0" />
+               </font>
+            </Label>
+            <TextField fx:id="loginNameField" layoutX="80.0" layoutY="226.0" prefHeight="51.0" prefWidth="421.0" promptText="Username" styleClass="textfield" stylesheets="@/css/styles.css" />
+            <TextField fx:id="passtext" layoutX="80.0" layoutY="300.0" prefHeight="51.0" prefWidth="421.0" promptText="Password" styleClass="textfield" stylesheets="@/css/styles.css" />
+            <PasswordField fx:id="password" layoutX="80.0" layoutY="300.0" minHeight="51.0" minWidth="421.0" promptText="Password" styleClass="textfield" stylesheets="@/css/styles.css" />
+            <Button fx:id="eyeIcon" layoutX="456.0" layoutY="312.0" mnemonicParsing="false" onAction="#togglePassword" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIconView glyphName="EYE_SLASH" size="20" />
+               </graphic>
+            </Button>
+            <Separator layoutX="80.0" layoutY="481.0" prefWidth="190.0" />
+            <Separator layoutX="314.0" layoutY="481.0" prefWidth="190.0" />
+            <Label layoutX="281.0" layoutY="474.0" text="OR" textFill="WHITE" />
+            <Label layoutX="133.0" layoutY="526.0" prefHeight="34.0" prefWidth="207.0" styleClass="fontfamily" text="Don't have an account?" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="signUpButton" layoutX="355.0" layoutY="523.0" mnemonicParsing="false" onAction="#loginToSignUp" style="-fx-background-color: transparent; -fx-text-fill: black;" stylesheets="@/css/styles.css" text="SignUp" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <FontAwesomeIconView glyphName="ENVELOPE" layoutX="463.0" layoutY="259.0" size="20" />
+            <JFXButton layoutX="80.0" layoutY="400.0" minHeight="51.0" minWidth="412.0" onAction="#loginUser" styleClass="logoutButton" stylesheets="@/css/styles.css" text="Login" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="144.0" layoutY="43.0" prefHeight="80.0" prefWidth="293.0" style="-fx-text-fill: black;" styleClass="fontfamily" stylesheets="@/css/styles.css" text="KocNow" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="54.0" />
                </font>
             </Label>
          </children>
-      </HBox>
-      <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="140.0" layoutY="150.0" styleClass="fontfamily" stylesheets="@/css/styles.css" text="Login to continue." textFill="WHITE">
-         <font>
-            <Font name="Geist Regular" size="35.0" />
-         </font>
-      </Label>
-      <TextField fx:id="loginNameField" layoutX="80.0" layoutY="226.0" prefHeight="51.0" prefWidth="421.0" promptText="Username" styleClass="textfield" stylesheets="@/css/styles.css" />
-      <TextField fx:id="passtext" layoutX="80.0" layoutY="300.0" prefHeight="51.0" prefWidth="421.0" promptText="Password" styleClass="textfield" stylesheets="@/css/styles.css" />
-      <PasswordField fx:id="password" layoutX="80.0" layoutY="300.0" minHeight="51.0" minWidth="421.0" promptText="Password" styleClass="textfield" stylesheets="@/css/styles.css" />
-      <Button fx:id="eyeIcon" layoutX="456.0" layoutY="312.0" mnemonicParsing="false" onAction="#togglePassword" style="-fx-background-color: transparent;">
-         <graphic>
-            <FontAwesomeIconView glyphName="EYE_SLASH" size="20" />
-         </graphic>
-      </Button>
-      <Separator layoutX="80.0" layoutY="481.0" prefWidth="190.0" />
-      <Separator layoutX="314.0" layoutY="481.0" prefWidth="190.0" />
-      <Label layoutX="281.0" layoutY="474.0" text="OR" textFill="WHITE" />
-      <Label layoutX="190.0" layoutY="524.0" prefHeight="34.0" prefWidth="130.0" text="Don't have an account?" textFill="WHITE">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Button fx:id="signUpButton" layoutX="323.0" layoutY="530.0" mnemonicParsing="false" onAction="#loginToSignUp" style="-fx-background-color: transparent;" stylesheets="@/css/styles.css" text="SignUp" textFill="WHITE" underline="true" />
-      <FontAwesomeIconView glyphName="ENVELOPE" layoutX="463.0" layoutY="259.0" size="20" />
-      <JFXButton layoutX="80.0" layoutY="400.0" minHeight="51.0" minWidth="412.0" onAction="#loginUser" styleClass="loginButton" stylesheets="@/css/styles.css" text="Login" />
+      </AnchorPane>
    </children>
-</AnchorPane>
+</StackPane>

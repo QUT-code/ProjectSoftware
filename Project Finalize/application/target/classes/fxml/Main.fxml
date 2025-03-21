@@ -3,10 +3,8 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -17,16 +15,11 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1440.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <left>
-      <AnchorPane prefHeight="900.0" prefWidth="250.0" styleClass="sideMenu" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="900.0" prefWidth="250.0" style="-fx-background-color: #6098C9;" styleClass="sideMenu" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="118.0" layoutY="48.0" stylesheets="@../css/styles.css" text="KocNow" AnchorPane.rightAnchor="58.0">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-            </Label>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="157.0" prefHeight="52.0" prefWidth="200.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Event" AnchorPane.leftAnchor="25.0">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="201.0" prefHeight="52.0" prefWidth="150.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Event" AnchorPane.leftAnchor="50.0">
                <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR_ALT" size="20" />
+                  <FontAwesomeIconView glyphName="CALENDAR_ALT" size="20" />
                </graphic>
                <effect>
                   <ColorAdjust />
@@ -38,9 +31,9 @@
                   <Insets left="30.0" />
                </padding>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" disable="true" graphicTextGap="15.0" layoutX="25.0" layoutY="231.0" prefHeight="52.0" prefWidth="200.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Favorite" AnchorPane.leftAnchor="25.0">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="301.0" onAction="#switchToHistory" prefHeight="52.0" prefWidth="150.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="History" AnchorPane.leftAnchor="50.0">
                <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="HEART" size="20" />
+                  <FontAwesomeIconView glyphName="HISTORY" size="20" />
                </graphic>
                <effect>
                   <ColorAdjust />
@@ -52,23 +45,9 @@
                   <Insets left="30.0" />
                </padding>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="306.0" onAction="#switchToHistory" prefHeight="52.0" prefWidth="200.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="History" AnchorPane.leftAnchor="25.0">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="401.0" onAction="#goToCreate" prefHeight="52.0" prefWidth="150.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Create" AnchorPane.leftAnchor="50.0">
                <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="HISTORY" size="20" />
-               </graphic>
-               <effect>
-                  <ColorAdjust />
-               </effect>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
-            </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="381.0" onAction="#goToCreate" prefHeight="52.0" prefWidth="200.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Create" AnchorPane.leftAnchor="25.0">
-               <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="20" />
+                  <FontAwesomeIconView glyphName="PLUS" size="20" />
                </graphic>
                <effect>
                   <ColorAdjust />
@@ -91,7 +70,7 @@
                   <Insets />
                </opaqueInsets>
             </JFXButton>
-            <ImageView fx:id="mainLogo" fitHeight="50.0" fitWidth="50.0" layoutX="42.0" layoutY="39.0" pickOnBounds="true" AnchorPane.topAnchor="39.0" />
+            <ImageView fx:id="mainLogo" fitHeight="100.0" fitWidth="100.0" layoutX="75.0" layoutY="31.0" pickOnBounds="true" />
          </children>
       </AnchorPane>
    </left>
@@ -100,26 +79,7 @@
          <children>
             <AnchorPane layoutX="-4.0" prefHeight="860.0" prefWidth="1174.0" styleClass="centerMenu" stylesheets="@../css/styles.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
                <children>
-                  <Label layoutX="85.0" layoutY="15.0" text="Search Event name or Venue" />
-                  <HBox alignment="CENTER" layoutX="62.0" layoutY="40.0" prefHeight="35.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #070707;" styleClass="centerMenu" stylesheets="@../css/styles.css">
-                     <children>
-                        <TextField fx:id="searchField" disable="true" prefHeight="25.0" prefWidth="158.0" promptText="Search" style="-fx-background-color: transparent;" styleClass="fontfamily" stylesheets="@../css/styles.css" />
-                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" />
-                     </children>
-                  </HBox>
-                  <DatePicker disable="true" editable="false" layoutX="885.0" layoutY="40.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="250.0" styleClass="date-picker" stylesheets="@../css/styles.css" AnchorPane.rightAnchor="39.0" />
-                  <Label layoutX="955.0" layoutY="15.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Search by Event Date" AnchorPane.rightAnchor="107.0" />
-                  <JFXButton disable="true" graphicTextGap="10.0" layoutX="408.0" layoutY="45.0" prefHeight="25.0" prefWidth="82.0" styleClass="logoutButton" stylesheets="@../css/styles.css" text="Filter">
-                     <graphic>
-                        <FontAwesomeIconView fill="WHITE" glyphName="FILTER" />
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton disable="true" graphicTextGap="10.0" layoutX="313.0" layoutY="45.0" onAction="#searchBox" prefHeight="25.0" prefWidth="82.0" styleClass="logoutButton" stylesheets="@../css/styles.css" text="Search">
-                     <graphic>
-                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" />
-                     </graphic>
-                  </JFXButton>
-                  <ScrollPane hbarPolicy="NEVER" layoutX="35.0" layoutY="141.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="701.0" prefWidth="1146.0" style="-fx-background-color: transparent;" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="100.0">
+                  <ScrollPane hbarPolicy="NEVER" layoutX="99.0" layoutY="141.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="701.0" prefWidth="1080.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="130.0">
                      <content>
                         <VBox fx:id="eventPane" prefHeight="2200.0" prefWidth="1358.0" spacing="30.0">
                            <children>
@@ -250,6 +210,20 @@
                         </VBox>
                      </content>
                   </ScrollPane>
+                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="81.0" layoutY="38.0" prefHeight="52.0" prefWidth="115.0" style="-fx-background-color: #6098C9;" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Filter" AnchorPane.rightAnchor="37.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="FILTER" size="20" />
+                     </graphic>
+                     <effect>
+                        <ColorAdjust />
+                     </effect>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </JFXButton>
                </children>
             </AnchorPane>
          </children>

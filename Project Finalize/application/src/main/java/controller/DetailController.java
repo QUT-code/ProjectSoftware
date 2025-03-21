@@ -14,12 +14,14 @@ import database.ConnectUserLogin;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import model.Event;
+import model.Session;
 import utility.AlertUtil;
 import controller.HistoryController;
 
@@ -29,22 +31,22 @@ public class DetailController implements Initializable {
     private Label EventTitle;
 
     @FXML
-    private JFXButton TicketPrice;
-
-    @FXML
-    private Text dateInfo;
-    
-    @FXML
-    private Text orgName;
-
-    @FXML
-    private TextArea descriptionField;
-    
-    @FXML
     private ImageView backgroundEvent;
 
     @FXML
-    private Text locationEvent;
+    private JFXButton dateInfo;
+
+    @FXML
+    private TextArea descriptionField;
+
+    @FXML
+    private JFXButton locationEvent;
+
+    @FXML
+    private JFXButton orgName;
+
+    @FXML
+    private JFXButton ticketPrice;
 
     public void setEventData(Event event) {
         // Set event title
@@ -54,7 +56,7 @@ public class DetailController implements Initializable {
         orgName.setText(event.getEventName());
 
         // Set ticket price
-        TicketPrice.setText(event.getEventTicketPrice());
+        ticketPrice.setText(event.getEventTicketPrice());
 
         // Set event date
         dateInfo.setText(event.getEventDate());
@@ -119,8 +121,8 @@ public class DetailController implements Initializable {
     }
 
     public boolean isUserValid(int userId) {
-        String query = "SELECT id FROM users WHERE id = ?";
-        try (Connection conn = ConnectUserLogin.getConnection();
+        String query = "SELECT user_id FROM users WHERE user_id = ?";
+        try (Connection conn = ConnectEventData.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
 
             stmt.setInt(1, userId);
@@ -140,7 +142,7 @@ public class DetailController implements Initializable {
     }
 
     public boolean isEventValid(int eventId) {
-        String query = "SELECT id FROM events WHERE id = ?";
+        String query = "SELECT event_id FROM events WHERE event_id = ?";
         try (Connection conn = ConnectEventData.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
 
@@ -163,29 +165,13 @@ public class DetailController implements Initializable {
     // Example methods to retrieve userId and eventId
     private int getUserId() {
         // Replace with your actual logic to retrieve the userId
-        return 1; // Example userId (replace with actual logic)
+    	return Session.getUserId(); // Example userId (replace with actual logic)
     }
 
     private int getEventId() {
         // Replace with your actual logic to retrieve the eventId
         return 1; // Example eventId (replace with actual logic)
     }
-
-
-
-
-	// Example method to process ticket purchase (Modify as needed)
-//	private void processTicketPurchase() {
-//	    // Implement ticket purchasing logic here
-//	    System.out.println("Ticket purchased successfully!");
-//
-//	    // Show a success alert
-//	    Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
-//	    successAlert.setTitle("Success");
-//	    successAlert.setHeaderText(null);
-//	    successAlert.setContentText("Your ticket has been successfully purchased!");
-//	    successAlert.showAndWait();
-//	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {

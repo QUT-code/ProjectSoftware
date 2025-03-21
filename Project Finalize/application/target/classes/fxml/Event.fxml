@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="eventHolder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="350.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #070707;" styleClass="centerMenu" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EventController">
+<HBox fx:id="eventHolder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="350.0" style="-fx-background-radius: 0; -fx-border-radius: 25; -fx-border-color: black; -fx-background-color: white;" styleClass="centerMenu" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EventController">
    <children>
       <ImageView fx:id="eventImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
          <HBox.margin>

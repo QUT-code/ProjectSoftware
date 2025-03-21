@@ -7,35 +7,45 @@
 
 .fontfamily {
     -fx-font-family: Geist;
-	-fx-text-fill: white;
-}
-
-.label {
-	-fx-text-fill: white;
+	-fx-text-fill: black;
 }
 
 .button {
 	-fx-text-fill: white;
 }
 
-.textfield {
-    -fx-background-color: #1D1D21;
-    -fx-border-color: #36383F;
-    -fx-font-family: Geist;
+.dialog-pane .button {
+    -fx-background-color: red;
     -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
+}
+
+.dialog-pane .button:focused {
+    -fx-background-color: darkred;
+}
+
+
+.textfield {
+    -fx-background-color: transparent;
+	-fx-border-color: transparent transparent black transparent;
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-style: solid;
+    -fx-font-family: Geist;
+    -fx-text-fill: black;
     -fx-font-size: 20;
 }
 
 .textarea {
-    -fx-background-color: #1D1D21;
+    -fx-background-color: transparent;
     -fx-border-color: #36383F;
     -fx-font-family: Geist;
-    -fx-text-fill: white;
+    -fx-text-fill: black;
     -fx-font-size: 20;
 }
 
 .textfield:focused {
-    
+    -fx-border-color: #6098C9;
 }
 
 .loginButton {
@@ -52,30 +62,35 @@
 }
 
 .scroll-pane > .viewport {
-	-fx-background-color: #070707;
+	-fx-background-color: white;
 }
 
 .fontawesome-icon {
 	-fx-font-size: 20;
 }
 .sideMenu {
-	-fx-background-color: #070707;
+	-fx-background-color: #F5F5F5;
 }
 .sideMenuButton {
+	-fx-text-fill: black;
 	-fx-background-radius: 20;
+	-fx-background-color: white;
 	-fx-font-weight: bold;
-}
+	-fx-transition: all 0.3s ease;
 
-.centerMenu {
-	-fx-background-color: #1C1D21;
-	-fx-background-radius: 25;
-	-fx-border-color: #343436;
-	-fx-border-radius: 25;
+    /* Add drop shadow */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 4);
 }
 
 .logoutButton {
-	-fx-background-color: #7448FD;
-	-fx-background-radius: 0;
+	-fx-text-fill: white;
+	-fx-background-radius: 20;
+	-fx-background-color: blue;
+	-fx-font-weight: bold;
+	-fx-transition: all 0.3s ease;
+
+    /* Add drop shadow */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 4);
 }
 
 .date-picker {

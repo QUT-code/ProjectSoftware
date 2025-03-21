@@ -144,6 +144,18 @@ public class CreateController implements Initializable{
 		updateView();
 		orgCategory.getItems().addAll(category);
 		orgCategory.setValue("Default");
+		orgName.textProperty().addListener((observable, oldValue, newValue) -> textOrgName.setText(newValue));
+		contactNumber.textProperty().addListener((observable, oldValue, newValue) -> textPhoneNumber.setText(newValue));
+		contactName.textProperty().addListener((observable, oldValue, newValue) -> textFullName.setText(newValue));
+		eventDates.valueProperty().addListener((observable, oldValue, newValue) -> {
+			    if (newValue != null) {
+			        textEventDate.setText(newValue.toString());
+			    }
+		});
+		orgCategory.valueProperty().addListener((observable, oldValue, newValue) -> textOrgCategory.setText(newValue));
+		eventPrice.textProperty().addListener((observable, oldValue, newValue) -> textEventPrice.setText(newValue));
+		eventTitles.textProperty().addListener((observable, oldValue, newValue) -> textEventTitle.setText(newValue));
+		eventSubTitles.textProperty().addListener((observable, oldValue, newValue) -> textEventSubTitle.setText(newValue));
 	}
 	
 	 @FXML
@@ -249,30 +261,47 @@ public class CreateController implements Initializable{
 	         return;
 	     }
 
-	     // Get the data from the form fields
-	     String eventName = orgName.getText();
-	     String eventCategory = orgCategory.getValue();
+	     // Validate email format
 	     String email = contactEmail.getText();
+	     if (!email.matches("^[A-Za-z0-9+_.-]+@(.+)$")) {
+	         AlertUtil.showAlert("Error", "Invalid email format.");
+	         return;
+	     }
+
+	     // Get data from form fields
+	     String eventName = orgName.getText();
+	     String eventCategory = (orgCategory.getValue() != null) ? orgCategory.getValue() : "";
 	     String name = contactName.getText();
 	     String phoneNumber = contactNumber.getText();
+	     
 	     LocalDate intEventDate = eventDates.getValue();
 	     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 	     String eventDate = intEventDate.format(formatter);
+	     
 	     String ticketPrice = eventPrice.getText();
 	     String eventTitle = eventTitles.getText();
 	     String eventSubtitle = eventSubTitles.getText();
 	     String eventDescription = eventDescriptions.getText();
 	     String eventLocation = eventLocations.getText();
 
-	     // Handle the image path
+	     // Handle the image paths
 	     String coverImagePath = "";
-	     if (layoutCover.getImage() != null) {
-	         coverImagePath = layoutCover.getImage().getUrl(); // Get the URL of the image
-	     }
-	     
 	     String bgImagePath = "";
+
+	     if (layoutCover.getImage() != null) {
+	         String imageUrl = layoutCover.getImage().getUrl();
+	         coverImagePath = imageUrl.substring(imageUrl.lastIndexOf("/") + 1); // Extract filename
+	         System.out.println("Layout Cover Image Name: " + coverImagePath);
+	     } else {
+	         System.out.println("Layout Cover Image: Not set");
+	     }
+
 	     if (eventBackground.getImage() != null) {
-	         bgImagePath = eventBackground.getImage().getUrl(); // Get the URL of the image
+	         String imageUrl = eventBackground.getImage().getUrl();
+	         bgImagePath = imageUrl.substring(imageUrl.lastIndexOf("/") + 1); // Extract filename
+	         System.out.println("Event Background Image Name: " + bgImagePath);
+	     } else {
+	         System.out.println("Event Background Image: Not set");
 	     }
 
 	     // Create an Event object using the form data
@@ -291,6 +320,9 @@ public class CreateController implements Initializable{
 	     event.setLocation(eventLocation);
 	     event.setEventBackground(bgImagePath);
 
+	     // Log event data for debugging
+	     System.out.println("Event Data: " + event.toString());
+
 	     // Insert the event into the database
 	     int eventId = insertEvent(event);
 
@@ -302,6 +334,7 @@ public class CreateController implements Initializable{
 	         AlertUtil.showAlert("Error", "Failed to add event. Please try again.");
 	     }
 	 }
+
 	
 	private void clearForm() {
 	    orgName.clear();

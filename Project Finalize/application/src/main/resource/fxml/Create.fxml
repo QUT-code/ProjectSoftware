@@ -19,69 +19,8 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1440.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateController">
    <left>
-      <AnchorPane prefHeight="900.0" prefWidth="250.0" styleClass="sideMenu" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="900.0" prefWidth="250.0" style="-fx-background-color: #6098C9;" styleClass="sideMenu" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="118.0" layoutY="48.0" stylesheets="@../css/styles.css" text="KocNow" AnchorPane.rightAnchor="58.0">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-            </Label>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="157.0" onAction="#backToEvent" prefHeight="52.0" prefWidth="200.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Event" AnchorPane.leftAnchor="25.0">
-               <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR_ALT" size="20" />
-               </graphic>
-               <effect>
-                  <ColorAdjust />
-               </effect>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
-            </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" disable="true" graphicTextGap="15.0" layoutX="25.0" layoutY="231.0" prefHeight="52.0" prefWidth="200.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Favorite" AnchorPane.leftAnchor="25.0">
-               <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="HEART" size="20" />
-               </graphic>
-               <effect>
-                  <ColorAdjust />
-               </effect>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
-            </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="306.0" onAction="#switchToHistory" prefHeight="52.0" prefWidth="200.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="History" AnchorPane.leftAnchor="25.0">
-               <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="HISTORY" size="20" />
-               </graphic>
-               <effect>
-                  <ColorAdjust />
-               </effect>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
-            </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="381.0" prefHeight="52.0" prefWidth="200.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Create" AnchorPane.leftAnchor="25.0">
-               <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="20" />
-               </graphic>
-               <effect>
-                  <ColorAdjust />
-               </effect>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
-            </JFXButton>
             <JFXButton contentDisplay="GRAPHIC_ONLY" graphicTextGap="15.0" layoutX="72.0" layoutY="837.0" maxHeight="-Infinity" onAction="#backToLogin" prefHeight="43.0" prefWidth="110.0" ripplerFill="BLACK" styleClass="logoutButton" stylesheets="@../css/styles.css" text="Log out" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="68.0">
                <graphic>
                   <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="20" />
@@ -93,14 +32,56 @@
                   <Insets />
                </opaqueInsets>
             </JFXButton>
-            <ImageView fx:id="mainLogo" fitHeight="50.0" fitWidth="50.0" layoutX="42.0" layoutY="39.0" pickOnBounds="true" AnchorPane.topAnchor="39.0" />
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="198.0" onAction="#backToEvent" prefHeight="52.0" prefWidth="150.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Event" AnchorPane.leftAnchor="50.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CALENDAR_ALT" size="20" />
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="298.0" onAction="#switchToHistory" prefHeight="52.0" prefWidth="150.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="History" AnchorPane.leftAnchor="50.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="HISTORY" size="20" />
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="25.0" layoutY="398.0" prefHeight="52.0" prefWidth="150.0" styleClass="sideMenuButton" stylesheets="@../css/styles.css" text="Create" AnchorPane.leftAnchor="50.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="PLUS" size="20" />
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </JFXButton>
+            <ImageView fx:id="mainLogo" fitHeight="100.0" fitWidth="100.0" layoutX="75.0" layoutY="35.0" pickOnBounds="true" />
          </children>
       </AnchorPane>
    </left>
    <center>
       <AnchorPane prefHeight="700.0" prefWidth="1190.0" styleClass="sideMenu" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane fx:id="step1Pane" layoutX="-4.0" prefHeight="860.0" prefWidth="1174.0" styleClass="centerMenu" stylesheets="@../css/styles.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <AnchorPane fx:id="step1Pane" layoutX="-4.0" prefHeight="860.0" prefWidth="1174.0" styleClass="centerMenu" stylesheets="@../css/styles.css" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
                <children>
                   <VBox layoutY="2.0" prefHeight="242.0" prefWidth="1168.0" AnchorPane.topAnchor="1.0">
                      <children>
@@ -242,7 +223,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="step2Pane" prefHeight="860.0" prefWidth="1174.0" styleClass="centerMenu" stylesheets="@../css/styles.css" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <AnchorPane fx:id="step2Pane" prefHeight="860.0" prefWidth="1174.0" styleClass="centerMenu" stylesheets="@../css/styles.css" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
                <children>
                   <VBox layoutY="3.0" prefHeight="774.0" prefWidth="1168.0" AnchorPane.topAnchor="2.0">
                      <children>
@@ -295,7 +276,7 @@
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="580.0">
                                  <children>
-                                    <Label text="Title">
+                                    <Label text="Event Title">
                                        <font>
                                           <Font size="25.0" />
                                        </font>
@@ -311,7 +292,7 @@
                                           <Insets right="80.0" top="20.0" />
                                        </VBox.margin>
                                     </TextField>
-                                    <Label text="SubTitle">
+                                    <Label text="Cover Title">
                                        <font>
                                           <Font size="25.0" />
                                        </font>
@@ -398,6 +379,11 @@
                         <Font size="25.0" />
                      </font>
                   </Label>
+                  <Label text="Event Background" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="130.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
             <AnchorPane fx:id="step4Pane" prefHeight="700.0" prefWidth="1190.0" styleClass="sideMenu" stylesheets="@../css/styles.css" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
@@ -419,14 +405,19 @@
                               <Font size="35.0" />
                            </font>
                         </Label>
-                        <VBox alignment="CENTER" layoutX="299.0" layoutY="231.0" prefHeight="480.0" prefWidth="596.0" spacing="10.0">
+                        <VBox alignment="CENTER" layoutX="299.0" layoutY="200.0" prefHeight="480.0" prefWidth="596.0" spacing="10.0">
                            <children>
-                              <Text fx:id="textOrgName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Organization Name:">
+                              <Label text="Organization">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="textOrgName" strokeType="OUTSIDE" strokeWidth="0.0" text="Organization Name:">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="textOrgCategory" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Org. Category:">
+                              <Text fx:id="textOrgCategory" strokeType="OUTSIDE" strokeWidth="0.0" text="Org. Category:">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -439,12 +430,12 @@
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <Text fx:id="textFullName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="FullName:">
+                              <Text fx:id="textFullName" strokeType="OUTSIDE" strokeWidth="0.0" text="FullName:">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="textPhoneNumber" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number:">
+                              <Text fx:id="textPhoneNumber" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number:">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -457,22 +448,22 @@
                                     <Insets top="20.0" />
                                  </VBox.margin>
                               </Label>
-                              <Text fx:id="textEventTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Title:">
+                              <Text fx:id="textEventTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="Title:">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="textEventSubTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="SubTitle:">
+                              <Text fx:id="textEventSubTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="SubTitle:">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="textEventPrice" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Price:">
+                              <Text fx:id="textEventPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Price:">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="textEventDate" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Date:">
+                              <Text fx:id="textEventDate" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Date:">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -481,19 +472,22 @@
                         </VBox>
                      </children>
                   </AnchorPane>
+                  <JFXButton contentDisplay="TEXT_ONLY" graphicTextGap="15.0" maxHeight="-Infinity" onAction="#addEvent" prefHeight="43.0" prefWidth="110.0" ripplerFill="BLACK" styleClass="logoutButton" stylesheets="@../css/styles.css" text="Submit" textFill="WHITE" AnchorPane.bottomAnchor="80.0" AnchorPane.rightAnchor="60.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ARROW_RIGHT" size="20" />
+                     </graphic>
+                     <effect>
+                        <ColorAdjust />
+                     </effect>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
                </children>
             </AnchorPane>
-            <JFXButton fx:id="submitButton" contentDisplay="TEXT_ONLY" graphicTextGap="15.0" layoutX="1030.0" layoutY="817.0" maxHeight="-Infinity" onAction="#addEvent" prefHeight="43.0" prefWidth="110.0" ripplerFill="BLACK" styleClass="logoutButton" stylesheets="@../css/styles.css" text="Submit" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="80.0">
-               <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_RIGHT" size="20" />
-               </graphic>
-               <effect>
-                  <ColorAdjust />
-               </effect>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </JFXButton>
             <JFXButton fx:id="nextButton" contentDisplay="GRAPHIC_ONLY" graphicTextGap="15.0" maxHeight="-Infinity" onAction="#handlePreviousButtonAction" prefHeight="43.0" prefWidth="110.0" ripplerFill="BLACK" styleClass="logoutButton" stylesheets="@../css/styles.css" text="Log out" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="80.0">
                <graphic>
                   <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" size="20" />

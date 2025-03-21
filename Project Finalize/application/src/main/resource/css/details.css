@@ -2,13 +2,13 @@
 	-fx-background-color: #222750;
 }
 .button {
-	-fx-text-fill: white;
+	-fx-text-fill: black;
 	-fx-background-color: #222750;
 	-fx-background-radius: 25;
 }
 
 .background {
-	-fx-background-color: #070707;
+	-fx-background-color: white;
 }
 
 .bar {
@@ -16,5 +16,5 @@
 }
 
 .text {
-	-fx-text-fill: white;
+	-fx-text-fill: black;
 }

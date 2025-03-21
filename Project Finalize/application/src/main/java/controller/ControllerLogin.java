@@ -1,5 +1,6 @@
 package controller;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -8,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import database.ConnectEventData;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.event.ActionEvent;
@@ -17,13 +19,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
-
-import database.ConnectUserLogin;
+import javafx.util.Duration;
+import model.Session;
 import utility.AlertUtil;
 
 public class ControllerLogin implements Initializable{
@@ -32,6 +36,13 @@ public class ControllerLogin implements Initializable{
 	
 	private FontAwesomeIconView eyeslash = new FontAwesomeIconView(FontAwesomeIcon.EYE_SLASH);
 	private FontAwesomeIconView eye = new FontAwesomeIconView(FontAwesomeIcon.EYE);
+	
+	@FXML
+	private MediaView mediaView;
+	
+	private Media media;
+	private File file;
+	private MediaPlayer mediaPlayer;
 	
 	@FXML
 	private Button eyeIcon;
@@ -68,37 +79,57 @@ public class ControllerLogin implements Initializable{
     private TextField loginUsername;
 
     @FXML
-	public void loginUser(ActionEvent event) throws IOException {
-		String name = loginNameField.getText();
-		String pass = password.getText();
-		
-		if (name.isEmpty() || pass.isEmpty()) {
-			AlertUtil.showAlert("Error", "All field are required!");
-			return;
-		}
-		
-		try (Connection conn = ConnectUserLogin.getConnection();
-			PreparedStatement stmt = conn.prepareStatement("Select * From users where name = ? And password = ?" )){
-			stmt.setString(1, name);
-			stmt.setString(2, pass);
-			ResultSet rs = stmt.executeQuery();
-			
-			if (rs.next()) {
-				AlertUtil.showAlert("Success", "Login Successful");
-				loginToMain(event);
-			}
-			else {
-				AlertUtil.showAlert("Failed to login", "Invalid password or username");
-			}
-		}catch (SQLException e) {
-			e.printStackTrace();
-			AlertUtil.showAlert("Error", "Login Failed");
-		}
-	}
+    public void loginUser(ActionEvent event) throws IOException {
+        String name = loginNameField.getText();
+        String pass = password.getText();
+        
+        if (name.isEmpty() || pass.isEmpty()) {
+            AlertUtil.showAlert("Error", "All fields are required!");
+            return;
+        }
+        
+        try (Connection conn = ConnectEventData.getConnection();
+             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM users WHERE name = ? AND password = ?")) {
+            
+            stmt.setString(1, name);
+            stmt.setString(2, pass);
+            ResultSet rs = stmt.executeQuery();
+            
+            if (rs.next()) {
+                // Fetch user_id and store it in the session
+                int userId = rs.getInt("user_id");
+                Session.setUserId(userId);  // Store the user ID in the session
+                
+                AlertUtil.showAlert("Success", "Login Successful");
+                loginToMain(event);
+            } else {
+                AlertUtil.showAlert("Failed to login", "Invalid username or password");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            AlertUtil.showAlert("Error", "Login Failed");
+        }
+    }
+
     
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
+		file = new File("sky.mp4");
+
+        // Create a Media object for the video
+        media = new Media(file.toURI().toString());
+
+        // Create a MediaPlayer and associate it with the MediaView
+        mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+        // Set the MediaPlayer to the MediaView
+        mediaView.setMediaPlayer(mediaPlayer);
+        mediaPlayer.currentTimeProperty().addListener((obs, oldTime, newTime) -> {
+            if (media.getDuration().subtract(Duration.millis(100)).lessThanOrEqualTo(newTime)) {
+                mediaPlayer.seek(Duration.ZERO); // Restart just before it ends
+            }
+        });
 	}
 	
 	

@@ -33,7 +33,7 @@ public class EventDetailDialog {
             
             dialog.setTitle("Event Details");
             dialog.getDialogPane().getStylesheets().add(
-                    EventDetailDialog.class.getResource("/css/details.css").toExternalForm()
+                    EventDetailDialog.class.getResource("/css/styles.css").toExternalForm()
                 );
 
             // Add a close button

@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DetailController">
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@../css/styles.css" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DetailController">
    <content>
-      <VBox prefHeight="838.0" prefWidth="1279.0" styleClass="background">
+      <VBox prefHeight="800.0" prefWidth="1279.0">
          <children>
-            <HBox prefHeight="454.0" prefWidth="1279.0">
+            <HBox prefHeight="355.0" prefWidth="1279.0">
                <children>
                   <VBox prefHeight="454.0" prefWidth="660.0">
                      <children>
@@ -30,7 +27,7 @@
                               <Insets left="20.0" top="20.0" />
                            </VBox.margin>
                         </Label>
-                        <Label styleClass="text" text="Event">
+                        <Label styleClass="text" text="Event Information">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -40,75 +37,72 @@
                         </Label>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <VBox prefHeight="100.0" prefWidth="342.0">
+                              <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="342.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
                                  <children>
-                                    <Label styleClass="text" text="Date and Time">
-                                       <VBox.margin>
-                                          <Insets left="20.0" top="10.0" />
-                                       </VBox.margin>
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <Text fx:id="dateInfo" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Date Information">
+                                    <JFXButton fx:id="dateInfo" prefHeight="44.0" prefWidth="249.0" ripplerFill="WHITE" style="-fx-background-color: #6098C9; -fx-background-radius: 25;">
                                        <VBox.margin>
                                           <Insets left="20.0" />
                                        </VBox.margin>
                                        <font>
-                                          <Font size="14.0" />
+                                          <Font size="22.0" />
                                        </font>
-                                    </Text>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="317.0">
+                                 <children>
+                                    <JFXButton fx:id="locationEvent" prefHeight="44.0" prefWidth="249.0" ripplerFill="WHITE" style="-fx-background-color: #6098C9; -fx-background-radius: 25;">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font></JFXButton>
                                  </children>
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                               </VBox>
-                              <VBox prefHeight="100.0" prefWidth="317.0">
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="223.0" prefWidth="659.0">
+                           <children>
+                              <VBox prefHeight="165.0" prefWidth="350.0">
                                  <children>
-                                    <Label styleClass="text" text="Venue">
+                                    <Label styleClass="text" text="Organizer">
                                        <font>
-                                          <Font size="14.0" />
+                                          <Font size="20.0" />
                                        </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" top="20.0" />
+                                       </VBox.margin>
                                     </Label>
-                                    <Text fx:id="locationEvent" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
+                                    <JFXButton fx:id="orgName" prefHeight="44.0" prefWidth="249.0" ripplerFill="WHITE" style="-fx-background-color: #6098C9; -fx-background-radius: 25;">
+                                       <VBox.margin>
+                                          <Insets left="20.0" top="20.0" />
+                                       </VBox.margin>
                                        <font>
-                                          <Font size="14.0" />
+                                          <Font size="22.0" />
                                        </font>
-                                    </Text>
+                                    </JFXButton>
                                  </children>
                               </VBox>
                            </children>
                         </HBox>
                         <Separator prefWidth="200.0" />
-                        <HBox alignment="CENTER" prefHeight="223.0" prefWidth="659.0" spacing="50.0">
-                           <children>
-                              <Label styleClass="text" text="Ticket Price">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets left="50.0" />
-                                 </HBox.margin>
-                              </Label>
-                              <JFXButton fx:id="TicketPrice" onAction="#purchaseTicket" prefHeight="41.0" prefWidth="123.0" text="Price">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </JFXButton>
-                           </children>
-                        </HBox>
-                        <Separator prefWidth="200.0" />
                      </children>
                   </VBox>
-                  <VBox prefHeight="454.0" prefWidth="607.0">
+                  <VBox alignment="CENTER" prefHeight="454.0" prefWidth="607.0">
                      <children>
-                        <ImageView fx:id="backgroundEvent" fitHeight="392.0" fitWidth="620.0" pickOnBounds="true" preserveRatio="true" />
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="bar" />
+                        <ImageView fx:id="backgroundEvent" fitHeight="276.0" fitWidth="408.0" pickOnBounds="true" preserveRatio="true" />
                      </children>
                   </VBox>
                </children>
             </HBox>
-            <HBox prefHeight="345.0" prefWidth="1279.0">
+            <HBox prefHeight="406.0" prefWidth="1279.0">
                <children>
                   <VBox prefHeight="200.0" prefWidth="660.0">
                      <children>
@@ -120,42 +114,28 @@
                               <Insets left="20.0" top="20.0" />
                            </VBox.margin>
                         </Label>
-                        <TextArea fx:id="descriptionField" editable="false" prefWidth="659.0" style="-fx-background-color: transparent;" wrapText="true" VBox.vgrow="ALWAYS">
+                        <TextArea fx:id="descriptionField" editable="false" prefWidth="637.0" style="-fx-background-color: transparent;" wrapText="true" VBox.vgrow="ALWAYS">
                            <VBox.margin>
-                              <Insets left="20.0" right="20.0" />
+                              <Insets left="20.0" />
                            </VBox.margin>
                         </TextArea>
                      </children>
                   </VBox>
-                  <VBox prefHeight="345.0" prefWidth="620.0">
+                  <VBox alignment="TOP_CENTER" prefHeight="345.0" prefWidth="620.0" spacing="20.0">
                      <children>
-                        <Label styleClass="text" text="Event Description">
+                        <JFXButton fx:id="ticketPrice" prefHeight="86.0" prefWidth="249.0" ripplerFill="WHITE" style="-fx-background-color: #6098C9; -fx-background-radius: 25;" text="Price">
                            <font>
-                              <Font size="26.0" />
+                              <Font size="22.0" />
                            </font>
+                        </JFXButton>
+                        <JFXButton onAction="#purchaseTicket" prefHeight="123.0" prefWidth="169.0" ripplerFill="WHITE" style="-fx-background-color: #6098C9; -fx-background-radius: 25;" text="PURCHASE">
                            <VBox.margin>
-                              <Insets left="20.0" top="20.0" />
+                              <Insets left="400.0" top="250.0" />
                            </VBox.margin>
-                        </Label>
-                        <Label styleClass="text" text="Organizer">
                            <font>
-                              <Font size="18.0" />
+                              <Font size="20.0" />
                            </font>
-                           <VBox.margin>
-                              <Insets left="20.0" />
-                           </VBox.margin>
-                           <graphic>
-                              <FontAwesomeIconView fill="WHITE" glyphName="USER" />
-                           </graphic>
-                        </Label>
-                        <Text fx:id="orgName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Org Name">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets left="37.0" />
-                           </VBox.margin>
-                        </Text>
+                        </JFXButton>
                      </children>
                   </VBox>
                </children>

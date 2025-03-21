@@ -8,28 +8,44 @@ public class TicketPurchase {
     private String ticketPrice;
     private String purchaseDate;
 
-    public TicketPurchase(int id, String eventName, String ticketPrice, String purchaseDate) {
-        this.id = id;
+    public TicketPurchase(String eventName, String ticketPrice, String purchaseDate) {
         this.eventName = eventName;
         this.ticketPrice = ticketPrice;
         this.purchaseDate = purchaseDate;
     }
 
-    public int getId() {
-        return id;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public String getEventName() {
-        return eventName;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public String getTicketPrice() {
-        return ticketPrice;
-    }
+	public String getEventName() {
+		return eventName;
+	}
 
-    public String getPurchaseDate() {
-        return purchaseDate;
-    }
+	public void setEventName(String eventName) {
+		this.eventName = eventName;
+	}
+
+	public String getTicketPrice() {
+		return ticketPrice;
+	}
+
+	public void setTicketPrice(String ticketPrice) {
+		this.ticketPrice = ticketPrice;
+	}
+
+	public String getPurchaseDate() {
+		return purchaseDate;
+	}
+
+	public void setPurchaseDate(String purchaseDate) {
+		this.purchaseDate = purchaseDate;
+	}
+
 }
 
 

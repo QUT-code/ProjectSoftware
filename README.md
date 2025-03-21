@@ -23,7 +23,7 @@ The Event Management Application is an event management application allows users
 4. Event Creation
    - Their will be some question relate to their information for user need to input such as first page user organization name, organization category, full name, email, phone number.
    - Event ticket title, subtitle, ticket price and event date, user can also to import the poster of image of thier product.
-  4.1. Buy ticket
+4.1. Buy ticket
      - User can buy ticket from another event.
      - User can also create event to let another user can buy thier own ticket too.
 5. History

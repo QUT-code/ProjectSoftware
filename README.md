@@ -35,3 +35,17 @@ The Event Management Application is an event management application allows users
 - Eclipse IDE
 - Java FX for UX/UI
 - Scene Builder
+
+# Setup and Installation
+1. Prerequisites
+   - Java 17 or later
+   - MYSQL workbench
+   - Scene Builder for designing UI
+2. Library needed
+   - install javafx from this website https://openjfx.io/
+   - step 1 : after you enter this site first install scene builder
+   - step 2 : getting started with javafx 11+
+   - step 3 : install with the machine or os you are using, and choose the right IDE for example you are using vscode so select vscode or eclipse do the same thing
+   - step 4 : We start develop this with Eclipse IDE, click on Non-Modulor from IDE and follow the instruction on this site https://openjfx.io/openjfx-docs/
+   - Install and setup mysql workbench, from this site https://www.mysql.com/products/workbench/
+   - Setup mysql workbench with your username and password.
